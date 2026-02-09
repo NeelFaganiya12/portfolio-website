@@ -12,7 +12,7 @@ export default function ExperiencePage() {
         {experience.map((job, i) => (
           <div key={i} className="flex flex-col sm:flex-row sm:items-start gap-1">
             <div className="shrink-0">
-              <div className="text-gray-900 dark:text-gray-100 font-medium">{job.role}</div>
+              <div className="text-gray-900 dark:text-gray-100 font-bold">{job.role}</div>
               <div className="text-gray-600 dark:text-gray-400 text-sm mt-0.5">{job.org}</div>
             </div>
             <span className="hidden sm:inline flex-1 min-w-2 overflow-hidden whitespace-nowrap text-gray-300 dark:text-gray-600 select-none text-xs self-center">{".".repeat(80)}</span>
