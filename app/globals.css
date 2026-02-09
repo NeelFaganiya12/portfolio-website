@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Light dot pattern for page background */
+.bg-page-dots {
+  background-color: #f9fafb;
+  background-image: radial-gradient(circle, rgba(156, 163, 175, 0.2) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-page-dots {
+  background-color: #111827;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Ensure all text is visible in dark mode */
+.dark,
+.dark body {
+  color: #f3f4f6;
+}
+
+/* Force headings and main content visible in dark mode (override any conflicting utilities) */
+.dark h1,
+.dark h2,
+.dark h3 {
+  color: #ffffff !important;
+}
+
+/* Override Tailwind gray text utilities so content is visible when dark: isn't applied */
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700 {
+  color: #f3f4f6 !important;
+}
+.dark .text-gray-200 {
+  color: #e5e7eb !important;
+}
+
+.dark p {
+  color: #e5e7eb !important;
+}
+
+.dark a[href] {
+  color: #93c5fd !important;
+}
+
+.dark a[href]:hover {
+  color: #bfdbfe !important;
+}
+
+/* Page-specific: bold dates and list labels in News/Awards/Experience/Courses/Teaching */
+.dark span.font-bold,
+.dark span.font-semibold,
+.dark div.font-medium {
+  color: #f9fafb !important;
+}
+
+/* Secondary text (terms, org names, descriptions) */
+.dark div.text-gray-600,
+.dark span.text-gray-500,
+.dark span.text-gray-600,
+.dark span.font-serif {
+  color: #d1d5db !important;
+}
+
+/* Keep dot leader subtle (don't override) */
+.dark span.overflow-hidden.whitespace-nowrap.select-none {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
