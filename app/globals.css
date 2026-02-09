@@ -17,12 +17,20 @@
 @layer base {
   body {
     @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    overflow-x: hidden;
   }
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling and prevent horizontal scroll on mobile */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Responsive: allow images/video to scale (don't target svg - breaks inline icons) */
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Custom scrollbar */
@@ -40,6 +48,25 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Mobile nav: menu panel and hamburger/close icons (script toggles #main-nav.menu-open) */
+@media (max-width: 767px) {
+  .mobile-menu-panel {
+    display: none;
+  }
+  #main-nav.menu-open .mobile-menu-panel {
+    display: block;
+  }
+  #main-nav .menu-icon-close {
+    display: none;
+  }
+  #main-nav.menu-open .menu-icon-open {
+    display: none;
+  }
+  #main-nav.menu-open .menu-icon-close {
+    display: inline-flex;
+  }
 }
 
 /* Light dot pattern for page background */

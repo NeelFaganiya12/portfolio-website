@@ -16,10 +16,10 @@ export default function AcademicLanding() {
   ];
 
   return (
-    <div>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <div className="w-full">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 w-full">
         {/* Name, School, Email, Office - centered */}
-        <header className="mb-12 space-y-2 text-lg text-center">
+        <header className="mb-12 space-y-2 text-lg text-center break-words">
           <h1 className="text-3xl font-semibold text-gray-900 dark:text-white">Neel Faganiya</h1>
           <p className="text-gray-700 dark:text-gray-300">
             David R. Cheriton School of Computer Science, University of Waterloo
@@ -81,10 +81,10 @@ export default function AcademicLanding() {
           <h2 className="text-xl font-bold text-center mb-8 text-gray-900 dark:text-white">News</h2>
           <div className="space-y-4">
             {news.map((item, i) => (
-              <div key={i} className="flex items-baseline gap-1">
+              <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-1 min-w-0">
                 <span className="text-gray-900 dark:text-gray-100 font-bold shrink-0 w-28">{item.date}</span>
-                <span className="flex-1 min-w-2 overflow-hidden whitespace-nowrap text-gray-300 dark:text-gray-600 select-none text-xs">{".".repeat(80)}</span>
-                <span className="text-gray-500 dark:text-gray-400 font-serif shrink-0">{item.body}</span>
+                <span className="hidden sm:inline flex-1 min-w-2 overflow-hidden whitespace-nowrap text-gray-300 dark:text-gray-600 select-none text-xs">{".".repeat(80)}</span>
+                <span className="text-gray-500 dark:text-gray-400 font-serif min-w-0 break-words">{item.body}</span>
               </div>
             ))}
           </div>
@@ -95,10 +95,10 @@ export default function AcademicLanding() {
           <h2 className="text-xl font-bold text-center mb-8 text-gray-900 dark:text-white">Awards</h2>
           <div className="space-y-4">
             {awards.map((item, i) => (
-              <div key={i} className="flex items-baseline gap-1">
+              <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-1 min-w-0">
                 <span className="text-gray-900 dark:text-gray-100 font-bold shrink-0 w-28">{item.date}</span>
-                <span className="flex-1 min-w-2 overflow-hidden whitespace-nowrap text-gray-300 dark:text-gray-600 select-none text-xs">{".".repeat(80)}</span>
-                <span className="text-gray-500 dark:text-gray-400 font-serif shrink-0">{item.body}</span>
+                <span className="hidden sm:inline flex-1 min-w-2 overflow-hidden whitespace-nowrap text-gray-300 dark:text-gray-600 select-none text-xs">{".".repeat(80)}</span>
+                <span className="text-gray-500 dark:text-gray-400 font-serif min-w-0 break-words">{item.body}</span>
               </div>
             ))}
           </div>

@@ -34,15 +34,15 @@ const courses: Course[] = [
 
 export default function CoursesPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 min-w-0">
       <h1 className="text-xl font-bold text-center mb-8 text-gray-900 dark:text-white">Courses</h1>
       <div className="space-y-4">
         {courses.map((course) => (
           <div
             key={course.code}
-            className="flex flex-col sm:flex-row sm:items-baseline gap-1 text-sm"
+            className="flex flex-col sm:flex-row sm:items-baseline gap-1 text-sm min-w-0"
           >
-            <div className="shrink-0">
+            <div className="min-w-0 flex-1 sm:flex-initial sm:shrink-0">
               {course.link ? (
                 <a
                   href={course.link}
