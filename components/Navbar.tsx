@@ -7,7 +7,7 @@ import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 
 const navItems = [
   { name: 'About', href: '/' },
-  { name: 'Publications', href: '/publications' },
+  { name: 'Papers', href: '/publications' },
   { name: 'Experience', href: '/experience' },
   { name: 'Courses', href: '/courses' },
   { name: 'Teaching', href: '/teaching' },
