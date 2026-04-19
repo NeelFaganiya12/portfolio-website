@@ -1,4 +1,5 @@
 const experience = [
+  { role: "Graduate Researcher", org: "CrySP (Cryptography, Security and Privacy) Lab, University of Waterloo", dates: "September 2025 – Present" },
   { role: "Cyber Security Analyst", org: "Cryptography & Certificate Services", dates: "May 2024 – August 2024" },
   { role: "Cyber Security Analyst", org: "Cryptography & Certificate Services", dates: "May 2023 – August 2023" },
   { role: "Cyber Security Analyst", org: "Global IT Risk", dates: "September 2022 – April 2023" },
