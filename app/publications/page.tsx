@@ -6,6 +6,16 @@ import { FiChevronDown, FiFileText } from 'react-icons/fi';
 export default function PublicationsPage() {
   const papers = [
     {
+      title: "Making Sense Together: Human-AI Collaboration in Literature Review",
+      authors: <strong>Neel Sanjaybhai Faganiya</strong>,
+      venue: "April 2026",
+      year: "",
+      paperUrl: "/docs/Making_Sense_Together.pdf",
+      webUrl: "#",
+      abstract:
+        "Literature review is not a simple search task; it is an iterative, exploratory process through which researchers identify, interpret, and synthesize prior work. The papers selected and how they are interpreted shape the direction of your entire research. However, many AI-assisted tools treat literature review primarily as a retrieval problem, presenting ranked lists of papers and positioning users as passive consumers rather than active sensemakers. Using a research-through-design approach, we developed a conceptual interactive prototype featuring scope steering, AI-generated clustering, on-demand explanations, and explicit feedback mechanisms. We conducted think-aloud sessions with participants of varying technical backgrounds, followed by a post-study Likert questionnaire assessing perceived agency, understanding, and trust.\nFindings indicate that agency emerges when users can visibly encode intent and observe predictable changes in system behavior. Exposed intermediate structuring, such as clustering, supported interpretive sensemaking by enabling users to reason about thematic organization. Trust was calibrated rather than absolute, depending on alignment between user actions and system responses. Differences between technical and non-technical users further highlight the need for mixed-expertise design.\nThese results frame AI-assisted literature review as collaborative sensemaking and suggest design implications emphasizing steerability, structural transparency, adaptive explanations, and interaction-level coherence to support calibrated trust.",
+    },
+    {
       title: "How do Language Models Encode Privacy Bias?",
       authors: (
         <>
@@ -19,16 +29,6 @@ export default function PublicationsPage() {
       webUrl: "#",
       abstract:
         "Large Language Models (LLMs) increasingly mediate socio-technical systems where privacy judgments are critical, yet they often encode biased privacy norms learned from internet-scale training data. Prior work has predominantly focused on detecting behavioral privacy biases without understanding their mechanistic origins within the model weights. This paper addresses this gap by investigating whether privacy biases are localize in specific circuits of LLMs using the Contextual Integrity (CI) framework.\nWe use this methodology of combining CI with Mechanistic Interpretability (MI) techniques to identify and analyze these circuits. Our approach constructs controlled vignette pairs that isolate key CI parameters and employs Edge Attribution Patching with Integrated Gradients (EAP-IG) on instruction-tuned LLMs to discover faithful circuits influencing privacy-related decisions. Results reveal specialized mid-to-late layer attention patterns with high fidelity that differentiate appropriate from inappropriate information flows, with low structural overlap indicating modular privacy mechanisms.\nOur work bridges behavioral privacy evaluation with internal model interpretability, advancing tools for targeted circuit editing to mitigate privacy biases without costly full model retraining. our finding provide actionable insights for developing privacy-respecting AI systems.",
-    },
-    {
-      title: "Making Sense Together: Human-AI Collaboration in Literature Review",
-      authors: <strong>Neel Sanjaybhai Faganiya</strong>,
-      venue: "April 2025",
-      year: "",
-      paperUrl: "/docs/Making_Sense_Together.pdf",
-      webUrl: "#",
-      abstract:
-        "Literature review is not a simple search task; it is an iterative, exploratory process through which researchers identify, interpret, and synthesize prior work. The papers selected and how they are interpreted shape the direction of your entire research. However, many AI-assisted tools treat literature review primarily as a retrieval problem, presenting ranked lists of papers and positioning users as passive consumers rather than active sensemakers. Using a research-through-design approach, we developed a conceptual interactive prototype featuring scope steering, AI-generated clustering, on-demand explanations, and explicit feedback mechanisms. We conducted think-aloud sessions with participants of varying technical backgrounds, followed by a post-study Likert questionnaire assessing perceived agency, understanding, and trust.\nFindings indicate that agency emerges when users can visibly encode intent and observe predictable changes in system behavior. Exposed intermediate structuring, such as clustering, supported interpretive sensemaking by enabling users to reason about thematic organization. Trust was calibrated rather than absolute, depending on alignment between user actions and system responses. Differences between technical and non-technical users further highlight the need for mixed-expertise design.\nThese results frame AI-assisted literature review as collaborative sensemaking and suggest design implications emphasizing steerability, structural transparency, adaptive explanations, and interaction-level coherence to support calibrated trust.",
     },
   ];
 
