@@ -1,4 +1,5 @@
 const teaching = [
+  { course: "CS 453/653", title: "Software and Systems Security", term: "Spring 2026" },
   { course: "CS 453/698", title: "Software and Systems Security", term: "Winter 2026" },
   { course: "CS 135", title: "Designing Functional Programs", term: "Fall 2025" },
 ];
